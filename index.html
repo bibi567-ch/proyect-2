@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica | Proyecto Parcial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+    <div class="bg-shape shape4"></div>
+
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <h1 class="calculator-title">Proto-Fu</h1>
+                <p class="calculator-subtitle">Calculadora Avanzada</p>
+            </div>
+
+            <div class="display-container">
+                <div class="display-history" id="displayHistory"></div>
+                <div class="display-current" id="displayCurrent">0</div>
+            </div>
+
+            <div class="buttons-grid">
+                <button class="btn btn-scientific" onclick="toggleMode('deg')">Deg</button>
+                <button class="btn btn-scientific" onclick="toggleMode('xl')">xl</button>
+                <button class="btn btn-scientific" onclick="appendOperator('(')">(</button>
+                <button class="btn btn-scientific" onclick="appendOperator(')')">)</button>
+                <button class="btn btn-scientific" onclick="calculatePercentage()">%</button>
+                <button class="btn btn-clear" onclick="clearDisplay()">AC</button>
+
+                <button class="btn btn-scientific" onclick="toggleMode('inv')">Inv</button>
+                <button class="btn btn-scientific" onclick="applyFunction('sin')">sin</button>
+                <button class="btn btn-scientific" onclick="applyFunction('ln')">ln</button>
+                <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+                <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+                <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-operator" onclick="appendOperator('/')">÷</button>
+
+                <button class="btn btn-scientific" onclick="toggleMode('tf')">Tf</button>
+                <button class="btn btn-scientific" onclick="applyFunction('cos')">cos</button>
+                <button class="btn btn-scientific" onclick="applyFunction('log')">log</button>
+                <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+                <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+                <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+                <button class="btn btn-operator" onclick="appendOperator('*')">×</button>
+
+                <button class="btn btn-scientific" onclick="appendConstant('e')">e</button>
+                <button class="btn btn-scientific" onclick="applyFunction('tan')">tan</button>
+                <button class="btn btn-scientific" onclick="applyFunction('sqrt')">√</button>
+                <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+                <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+                <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-operator" onclick="appendOperator('-')">–</button>
+
+                <button class="btn btn-scientific" onclick="appendAns()">Ans</button>
+                <button class="btn btn-scientific" onclick="applyFunction('exp')">EXP</button>
+                <button class="btn btn-scientific" onclick="appendOperator('^')">xº</button>
+                <button class="btn btn-number" onclick="appendNumber('0')">0</button>
+                <button class="btn btn-decimal" onclick="appendDecimal()">.</button>
+                <button class="btn btn-equals" onclick="calculate()">=</button>
+            </div>
+
+            <div class="calculator-footer">
+                <div>
+                    <span class="feature-badge">Operaciones Múltiples</span>
+                    <span class="feature-badge">Decimales :) </span>
+                    <span class="feature-badge">Jerarquía </span>
+                    <span class="feature-badge">Científica estamos en proceso</span>
+                </div>
+                <div class="footer-text">
+                    Taller de Programación •   Proyecto 2
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
